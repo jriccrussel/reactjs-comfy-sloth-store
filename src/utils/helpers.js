@@ -5,7 +5,7 @@ export const formatPrice = (number) => {
     }).format(number / 100)
 }
 
-// "type" = "category, color, company and etc...."
+// "type" = looking a strtng type which is "category, color, company and etc...."
 export const getUniqueValues = (data, type) => {
   let unique = data.map((item) => item[type])
   if (type === 'colors') {

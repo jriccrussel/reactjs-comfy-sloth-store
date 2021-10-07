@@ -13,9 +13,9 @@ import {
 import { useProductsContext } from './products_context'
 
 const initialState = {
-  filtered_products: [], // "dispatch({ type: LOAD_PRODUCTS, payload: products })" > "(action.type === LOAD_PRODUCTS)" > "filtered_products: [...action.payload]"
-  all_products: [], // "dispatch({ type: LOAD_PRODUCTS, payload: products })" > "(action.type === LOAD_PRODUCTS)" > "all_products: [...action.payload],"
-  grid_view: true, // "filter_context" | "dispatch({ type: SET_GRIDVIEW })" and "dispatch({ type: SET_LISTVIEW })" > "filter_reducer" | "grid_view" is updated "(action.type === SET_GRIDVIEW)" and "(action.type === SET_LISTVIEW)"
+  filtered_products: [], 
+  all_products: [], 
+  grid_view: true, 
   sort: 'price-lowest',
   filters: {
     text: '',
