@@ -13,17 +13,17 @@ export const UserProvider = ({ children }) => {
   //   console.log(`isLoading: ${isLoading}`)
   // }, [isAuthenticated])
 
-  useEffect(() => {
-    if(isAuthenticated){
-      setMyUser(user)
-    } else {
-      setMyUser(false)
-    }
-  }, [isAuthenticated])
-
   // useEffect(() => {
-  //   setMyUser(user)
-  // }, [user])
+  //   if(isAuthenticated){
+  //     setMyUser(user)
+  //   } else {
+  //     setMyUser(false)
+  //   }
+  // }, [isAuthenticated])
+
+  useEffect(() => {
+    setMyUser(user)
+  }, [user])
 
   return (
     <UserContext.Provider value={{

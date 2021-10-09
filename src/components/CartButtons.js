@@ -8,7 +8,7 @@ import { useUserContext } from '../context/user_context'
 
 const CartButtons = () => {
   const { closeSidebar, } = useProductsContext()
-  const { total_items, } = useCartContext()
+  const { total_items, clearCart } = useCartContext()
 
   // Auth0
   const { loginWithRedirect, myUser, logout } = useUserContext()  
@@ -42,7 +42,7 @@ const CartButtons = () => {
           type='button'
           className='auth-btn'
           onClick={() => {
-            // clearCart()
+            clearCart()
             localStorage.removeItem('user')
             logout({ returnTo: window.location.origin })
           }}
